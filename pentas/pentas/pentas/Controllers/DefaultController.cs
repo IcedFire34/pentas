@@ -17,5 +17,13 @@ namespace pentas.Controllers
         {
             return View();
         }
+        public ActionResult Tesisler()
+        {
+            return View();
+        }
+        public ActionResult Guzelyali_Sosyal_Tesisleri()
+        {
+            return View();
+        }
     }
 }

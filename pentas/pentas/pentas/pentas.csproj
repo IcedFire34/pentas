@@ -239,6 +239,33 @@
     <Content Include="web\assets\images\team\5.jpg" />
     <Content Include="web\assets\images\team\6.jpg" />
     <Content Include="web\assets\images\team\7.jpg" />
+    <Content Include="web\assets\images\tesisler\cay_ocaklari.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe.jpg" />
+    <Content Include="web\assets\images\tesisler\guzelyali_sosyal_tesisleri.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\1.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\11.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\12.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\13.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\14.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\15.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\16.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\17.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\2.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\3.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\4.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\5.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\6.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\8.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\9.jpg" />
+    <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\guzelyali1.jpg" />
+    <Content Include="web\assets\images\tesisler\kurtkoy_piknik_alani.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsı.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_kurtkoy.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil.jpg" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani.png" />
     <Content Include="web\assets\images\testimonials\quote-icon.png" />
     <Content Include="web\assets\images\testimonials\quote-icon2.png" />
     <Content Include="web\assets\images\testimonials\thumbs\1.png" />
@@ -385,6 +412,8 @@
     <Content Include="web\assets\pdf\kvvk_basvuru.pdf" />
     <Content Include="web\assets\pdf\kvvk_guvenlik.pdf" />
     <Content Include="web\assets\pdf\kvvk_politika.pdf" />
+    <Content Include="Views\Default\Tesisler.cshtml" />
+    <Content Include="Views\Default\Guzelyali_Sosyal_Tesisleri.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -5429,35 +5429,79 @@ textarea.form-control {
 /*-----------------------
     portfolio
 ------------------------*/
+.portfolio-layout2 {
+    padding: 20px;
+}
+
 .portfolio-item {
-  position: relative;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  -webkit-box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.06);
-          box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.06);
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    height: 250px; /* Sabit yükseklik */
+    width: 100%; /* Ekran boyutuna uyumlu */
+    max-width: 100%; /* Ekran geniþliðine göre sýnýrlama */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Padding ve border'ý boyuta dahil eder */
 }
 
-.portfolio-item .portfolio__img {
-  position: relative;
-  overflow: hidden;
+.portfolio__img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
+    width: 100%;
 }
 
-.portfolio-item .portfolio__img img {
-  width: 100%;
-  max-width: 100%;
-  border-radius: 4px 4px 0 0;
-  -webkit-transition: all 0.6s linear;
-  transition: all 0.6s linear;
+    .portfolio__img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Resmin portföy öðesini tamamen doldurmasýný saðlar */
+    }
+
+.portfolio__body {
+    padding: 15px;
+    text-align: center;
+    margin-top: auto; /* Baþlýk ve öðenin alt sýnýrýný hizalar */
 }
 
-.portfolio-item .portfolio__body {
-  background: #ffffff;
-  padding: 25px 36px 36px 40px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.portfolio__title {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
 }
+
+/* Responsive tasarým ayarlarý */
+@media (max-width: 576px) {
+    .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-lg-4 {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+.portfolio-item-wrapper {
+    padding-left: 15px; /* Sol iç boþluk */
+    padding-right: 15px; /* Sað iç boþluk */
+    margin-bottom: 30px; /* Portföy öðeleri arasýndaki boþluk */
+}
+
 
 .portfolio-item:hover {
   -webkit-box-shadow: 0px 5px 83px 0px rgba(40, 40, 40, 0.11);
