@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -45,6 +45,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -55,6 +64,24 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.3.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -72,32 +99,8 @@
     </Reference>
     <Reference Include="System.Net.Http.WebRequest">
     </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.Optimization">
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -112,11 +115,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -125,9 +123,50 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Sınıflar\Admin.cs" />
+    <Compile Include="Models\Sınıflar\AnaSayfa.cs" />
+    <Compile Include="Models\Sınıflar\Context.cs" />
+    <Compile Include="Models\Sınıflar\Hizmet.cs" />
+    <Compile Include="Models\Sınıflar\IK.cs" />
+    <Compile Include="Models\Sınıflar\Iletisim.cs" />
+    <Compile Include="Models\Sınıflar\Isletme.cs" />
+    <Compile Include="Models\Sınıflar\Tesis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="web\about-us.html" />
     <Content Include="web\assets\css\libraries.css" />
     <Content Include="web\assets\css\style.css" />
@@ -240,7 +279,18 @@
     <Content Include="web\assets\images\team\6.jpg" />
     <Content Include="web\assets\images\team\7.jpg" />
     <Content Include="web\assets\images\tesisler\cay_ocaklari.jpg" />
+    <Content Include="web\assets\images\tesisler\cay_ocaklari\1.jpg" />
+    <Content Include="web\assets\images\tesisler\cay_ocaklari\2.jpg" />
+    <Content Include="web\assets\images\tesisler\cay_ocaklari\3.jpg" />
+    <Content Include="web\assets\images\tesisler\cay_ocaklari\4.jpg" />
+    <Content Include="web\assets\images\tesisler\cay_ocaklari\5.jpg" />
     <Content Include="web\assets\images\tesisler\durak_büfe.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe\1.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe\2.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe\3.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe\4.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe\5.jpg" />
+    <Content Include="web\assets\images\tesisler\durak_büfe\6.jpg" />
     <Content Include="web\assets\images\tesisler\guzelyali_sosyal_tesisleri.jpg" />
     <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\1.jpg" />
     <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\11.jpg" />
@@ -258,14 +308,116 @@
     <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\8.jpg" />
     <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\9.jpg" />
     <Content Include="web\assets\images\tesisler\güzelyalı_sosyal_tesisleri\guzelyali1.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\1.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\10.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\11.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\12.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\13.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\14.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\15.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\16.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\17.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\18.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\19.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\2.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\20.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\22.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\23.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\24.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\3.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\4.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\5.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\6.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\7.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\8.jpg" />
+    <Content Include="web\assets\images\tesisler\kurnaköy_piknik_alani\9.jpg" />
     <Content Include="web\assets\images\tesisler\kurtkoy_piknik_alani.jpg" />
     <Content Include="web\assets\images\tesisler\pencr_bahce_kafe.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\1.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\10.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\11.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\12.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\13.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\14.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\2.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\3.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\4.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\5.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\6.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\7.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\8.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_bahce_kafe\9.jpg" />
     <Content Include="web\assets\images\tesisler\pencr_burun.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\1.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\11.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\12.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\2.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\3.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\4.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\5.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\6.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\7.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_burun\8.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\1.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\10.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\11.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\12.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\13.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\2.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\4.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\5.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\6.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\7.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\8.jpeg" />
+    <Content Include="web\assets\images\tesisler\pencr_carsi\9.jpeg" />
     <Content Include="web\assets\images\tesisler\pencr_carsı.jpeg" />
     <Content Include="web\assets\images\tesisler\pencr_koru.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\1.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\10.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\11.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\12.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\13.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\14.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\15.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\16.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\17.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\18.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\2.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\3.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\4.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\5.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\6.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\7.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\8.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_koru\9.jpg" />
     <Content Include="web\assets\images\tesisler\pencr_kurtkoy.jpg" />
     <Content Include="web\assets\images\tesisler\pencr_sahil.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\1.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\10.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\11.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\12.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\2.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\3.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\4.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\5.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\6.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\7.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\8.jpg" />
+    <Content Include="web\assets\images\tesisler\pencr_sahil\9.jpg" />
     <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\10.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\11.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\12.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\13.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\14.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\2.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\3.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\4.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\5.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\6.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\7.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\8.png" />
+    <Content Include="web\assets\images\tesisler\yenisehir_piknik_alani\9.png" />
     <Content Include="web\assets\images\testimonials\quote-icon.png" />
     <Content Include="web\assets\images\testimonials\quote-icon2.png" />
     <Content Include="web\assets\images\testimonials\thumbs\1.png" />
@@ -286,31 +438,9 @@
     <Content Include="web\assets\php\PHPMailer\class.smtp.php" />
     <Content Include="web\assets\php\PHPMailer\get_oauth_token.php" />
     <Content Include="web\assets\php\PHPMailer\PHPMailerAutoload.php" />
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-grid.rtl.css" />
-    <Content Include="Content\bootstrap-grid.rtl.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap-reboot.rtl.css" />
-    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
-    <Content Include="Content\bootstrap-utilities.css" />
-    <Content Include="Content\bootstrap-utilities.min.css" />
-    <Content Include="Content\bootstrap-utilities.rtl.css" />
-    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap.rtl.css" />
-    <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.bundle.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="web\assets\css\style.css.map" />
     <Content Include="web\assets\fonts\icomoon.eot" />
     <Content Include="web\assets\fonts\icomoon.ttf" />
@@ -379,16 +509,6 @@
     <Content Include="web\shop.html" />
     <Content Include="web\shopping-cart.html" />
     <Content Include="web\team.html" />
-    <None Include="Scripts\jquery-3.7.0.intellisense.js" />
-    <Content Include="Scripts\jquery-3.7.0.js" />
-    <Content Include="Scripts\jquery-3.7.0.min.js" />
-    <Content Include="Scripts\jquery-3.7.0.slim.js" />
-    <Content Include="Scripts\jquery-3.7.0.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -414,10 +534,20 @@
     <Content Include="web\assets\pdf\kvvk_politika.pdf" />
     <Content Include="Views\Default\Tesisler.cshtml" />
     <Content Include="Views\Default\Guzelyali_Sosyal_Tesisleri.cshtml" />
+    <Content Include="Views\Default\test.cshtml" />
+    <Content Include="Views\Default\PENCR_Bahce_Kafe.cshtml" />
+    <Content Include="Views\Default\PENCR_Burun.cshtml" />
+    <Content Include="Views\Default\PENCR_Carsi.cshtml" />
+    <Content Include="Views\Default\PENCR_Sahil.cshtml" />
+    <Content Include="Views\Default\PENCR_Koru.cshtml" />
+    <Content Include="Views\Default\PENCR_Kurtkoy.cshtml" />
+    <Content Include="Views\Default\Durak_Büfe.cshtml" />
+    <Content Include="Views\Default\Cay_Ocaklari.cshtml" />
+    <Content Include="Views\Default\Yenisehir_Piknik_Alani.cshtml" />
+    <Content Include="Views\Default\Kunrakoy_Piknik_Alani.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="web\assets\images\sliders\" />
   </ItemGroup>
   <ItemGroup>
@@ -444,8 +574,8 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\jquery-3.7.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.7.0.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -479,8 +609,12 @@
     <PropertyGroup>
       <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
   </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

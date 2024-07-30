@@ -1,0 +1,173 @@
+﻿
+@{
+    ViewBag.Title = "PENCR_Carsi";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loading"><span></span><span></span><span></span><span></span></div>
+        </div><!-- /.preloader -->
+        <!-- =========================
+            Header
+        =========================== -->
+        <!-- /.Header -->
+        <!-- =========================
+                Google Map
+        =========================  -->
+        <section class="google-map py-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d188.54245072362275!2d29.232295877315522!3d40.87891357848206!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadcad4eb5a53f%3A0x2313c56a9013dbe8!2zUGVuQ1Igw4dhcsWfxLE!5e0!3m2!1str!2sus!4v1722339639875!5m2!1str!2sus" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section><!-- /.GoogleMap -->
+        <!-- ==========================
+            contact layout 1
+        =========================== -->
+        <section class="contact-layout1 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-panel p-0 box-shadow-none">
+                            <div class="contact__panel-info mb-30">
+                                <div class="contact-info-box">
+                                    <h4 class="contact__info-box-title">Adres</h4>
+                                    <ul class="contact__info-list list-unstyled">
+                                        <li>Batı Mahallesi, İsmetpaşa Caddesi, Pendik/İSTANBUL</li>
+                                    </ul><!-- /.contact__info-list -->
+                                </div><!-- /.contact-info-box -->
+                                <div class="contact-info-box">
+                                    <h4 class="contact__info-box-title">İletişim</h4>
+                                    <ul class="contact__info-list list-unstyled">
+                                        <li>Email: <a href="mailto:info@pentas.org">info@pentas.org</a></li>
+                                        <li>Telefon: <a href="tel:+90 (216) 491 11 08">+90 (216) 491 11 08</a></li>
+                                    </ul><!-- /.contact__info-list -->
+                                </div><!-- /.contact-info-box -->
+
+                            </div><!-- /.contact__panel-info -->
+                            <form method="post" action="assets/php/contact.php" id="contactForm" class="contact__panel-form mb-30">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 class="contact__panel-title">Açıklama</h4>
+                                        <p class="contact__panel-desc mb-40">
+                                            PenCR Çarşı güler yüzlü personeli ve güvenilir hizmet kalitesiyle vatandaşlarımızın hizmetindedir.
+                                        </p>
+
+                                        <!--====================
+                                        GALARY
+                                        =====================-->
+                                        <section id="gallery" class="gallery">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/1.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/1.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/2.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/2.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/4.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/4.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/5.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/5.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/6.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/6.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/7.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/7.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/8.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/8.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/9.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/9.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/10.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/10.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/11.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/11.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/12.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/12.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/tesisler/pencr_carsi/13.jpeg">
+                                                                <img src="~/web/assets/images/tesisler/pencr_carsi/13.jpeg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+
+                                                </div><!-- /.row -->
+                                            </div><!-- /.container-fluid -->
+                                        </section>
+                                    </div>
+
+                                </div><!-- /.row -->
+                            </form>
+                        </div><!-- /.contact__panel -->
+                    </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.contact layout 1 -->
+        <!-- ========================
+          Footer
+        ========================== -->
+        <!-- /.Footer -->
+
+
+    </div><!-- /.wrapper -->
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
