@@ -120,6 +120,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OtoparklarController.cs" />
+    <Compile Include="Controllers\TesislerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -234,6 +236,33 @@
     <Content Include="web\assets\images\icons\pdf.png" />
     <Content Include="web\assets\images\icons\quote.png" />
     <Content Include="web\assets\images\logo\logo.png" />
+    <Content Include="web\assets\images\otoparklar\carsi_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\eski_imamhatip_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otopark.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\1.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\10.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\11.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\2.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\3.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\4.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\5.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\6.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\7.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\8.jpg" />
+    <Content Include="web\assets\images\otoparklar\havaalani_otoparki\9.jpg" />
+    <Content Include="web\assets\images\otoparklar\marmara_hastanesi_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\mehmet_akif_kapali_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\1.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\2.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\3.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\4.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\5.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\6.jpg" />
+    <Content Include="web\assets\images\otoparklar\merkez_sahil_otoparki\7.jpg" />
+    <Content Include="web\assets\images\otoparklar\metro_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\mostar_otoparki.jpg" />
+    <Content Include="web\assets\images\otoparklar\pazar_yeri_otoparki.jpg" />
     <Content Include="web\assets\images\page-titles\1.jpg" />
     <Content Include="web\assets\images\page-titles\10.jpg" />
     <Content Include="web\assets\images\page-titles\11.jpg" />
@@ -547,25 +576,24 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_TestLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
-    <Content Include="Views\Default\Tesislerimiz.cshtml" />
     <Content Include="Views\Default\Kurumsal.cshtml" />
     <Content Include="web\assets\pdf\kvvk_aydinlatma.pdf" />
     <Content Include="web\assets\pdf\kvvk_basvuru.pdf" />
     <Content Include="web\assets\pdf\kvvk_guvenlik.pdf" />
     <Content Include="web\assets\pdf\kvvk_politika.pdf" />
     <Content Include="Views\Default\Tesisler.cshtml" />
-    <Content Include="Views\Default\Guzelyali_Sosyal_Tesisleri.cshtml" />
+    <Content Include="Views\Tesisler\Guzelyali_Sosyal_Tesisleri.cshtml" />
     <Content Include="Views\Default\test.cshtml" />
-    <Content Include="Views\Default\PENCR_Bahce_Kafe.cshtml" />
-    <Content Include="Views\Default\PENCR_Burun.cshtml" />
-    <Content Include="Views\Default\PENCR_Carsi.cshtml" />
-    <Content Include="Views\Default\PENCR_Sahil.cshtml" />
-    <Content Include="Views\Default\PENCR_Koru.cshtml" />
-    <Content Include="Views\Default\PENCR_Kurtkoy.cshtml" />
-    <Content Include="Views\Default\Durak_Büfe.cshtml" />
-    <Content Include="Views\Default\Cay_Ocaklari.cshtml" />
-    <Content Include="Views\Default\Yenisehir_Piknik_Alani.cshtml" />
-    <Content Include="Views\Default\Kunrakoy_Piknik_Alani.cshtml" />
+    <Content Include="Views\Tesisler\PENCR_Bahce_Kafe.cshtml" />
+    <Content Include="Views\Tesisler\PENCR_Burun.cshtml" />
+    <Content Include="Views\Tesisler\PENCR_Carsi.cshtml" />
+    <Content Include="Views\Tesisler\PENCR_Sahil.cshtml" />
+    <Content Include="Views\Tesisler\PENCR_Koru.cshtml" />
+    <Content Include="Views\Tesisler\PENCR_Kurtkoy.cshtml" />
+    <Content Include="Views\Tesisler\Durak_Büfe.cshtml" />
+    <Content Include="Views\Tesisler\Cay_Ocaklari.cshtml" />
+    <Content Include="Views\Tesisler\Yenisehir_Piknik_Alani.cshtml" />
+    <Content Include="Views\Tesisler\Kunrakoy_Piknik_Alani.cshtml" />
     <Content Include="Views\Default\Admin.cshtml" />
     <Content Include="web\login_assets\fonts\et-line.eot" />
     <Content Include="web\login_assets\fonts\et-line.ttf" />
@@ -596,10 +624,12 @@
     <Content Include="web\login_assets\js\bootstrap.esm.min.js.map" />
     <Content Include="web\login_assets\js\bootstrap.js.map" />
     <Content Include="web\login_assets\js\bootstrap.min.js.map" />
+    <Content Include="Views\Default\Otoparklar.cshtml" />
+    <Content Include="Views\Otoparklar\Havaalani_Otoparki.cshtml" />
+    <Content Include="Views\Otoparklar\Merkez_Sahil_Otoparki.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="web\assets\images\otoparklar\" />
     <Folder Include="web\assets\images\sliders\" />
   </ItemGroup>
   <ItemGroup>

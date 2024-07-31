@@ -1,0 +1,165 @@
+﻿
+@{
+    ViewBag.Title = "Havaalani_Otoparki";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <div class="wrapper">
+        <div class="preloader">
+            <div class="loading"><span></span><span></span><span></span><span></span></div>
+        </div><!-- /.preloader -->
+        <!-- =========================
+            Header
+        =========================== -->
+        <!-- /.Header -->
+        <!-- =========================
+                Google Map
+        =========================  -->
+        <section class="google-map py-0">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d493.39951965746314!2d29.308053099332973!3d40.925760462035825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadb6fdc1473d1%3A0x4c629bb8211332dc!2sPenPark%20Havaalan%C4%B1!5e0!3m2!1str!2sus!4v1722423561914!5m2!1str!2sus" 
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section><!-- /.GoogleMap -->
+        <!-- ==========================
+            contact layout 1
+        =========================== -->
+        <section class="contact-layout1 pb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="contact-panel p-0 box-shadow-none">
+                            <div class="contact__panel-info mb-30">
+                                <div class="contact-info-box">
+                                    <h4 class="contact__info-box-title">Adres</h4>
+                                    <ul class="contact__info-list list-unstyled">
+                                        <li>Yenişehir, Millet Cd. No:30, 34890 Pendik/İstanbul, Türkiye</li>
+                                    </ul><!-- /.contact__info-list -->
+                                </div><!-- /.contact-info-box -->
+                                <div class="contact-info-box">
+                                    <h4 class="contact__info-box-title">İletişim</h4>
+                                    <ul class="contact__info-list list-unstyled">
+                                        <li>Email: <a href="mailto:info@pentas.org">info@pentas.org</a></li>
+                                        <li>Telefon: <a href="tel:+90(216) 491 11 05">+90(216) 491 11 05</a></li>
+                                    </ul><!-- /.contact__info-list -->
+                                </div><!-- /.contact-info-box -->
+
+                            </div><!-- /.contact__panel-info -->
+                            <form method="post" action="assets/php/contact.php" id="contactForm" class="contact__panel-form mb-30">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <h4 class="contact__panel-title">Açıklama</h4>
+                                        <p class="contact__panel-desc mb-40">
+                                            Otoparkımız 680 araç kapasiteli olup 7/24 siz sayın vatandaşlarımızın hizmetindedir.
+                                        </p>
+
+                                        <!--====================
+                                        GALARY
+                                        =====================-->
+                                        <section id="gallery" class="gallery">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/1.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/1.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/2.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/2.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/3.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/3.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/4.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/4.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/5.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/5.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/6.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/6.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/7.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/7.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/8.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/8.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/9.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/9.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/10.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/10.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+                                                    <div class="col-sm-6 col-md-6 col-lg-3">
+                                                        <div class="gallery-item">
+                                                            <a class="popup-gallery-item" href="~/web/assets/images/otoparklar/havaalani_otoparki/11.jpg">
+                                                                <img src="~/web/assets/images/otoparklar/havaalani_otoparki/11.jpg" alt="gallery img">
+                                                            </a>
+                                                        </div>
+                                                    </div><!-- /.col-lg-4 -->
+
+                                                </div><!-- /.row -->
+                                            </div><!-- /.container-fluid -->
+                                        </section>
+                                    </div>
+
+                                </div><!-- /.row -->
+                            </form>
+                        </div><!-- /.contact__panel -->
+                    </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.contact layout 1 -->
+        <!-- ========================
+          Footer
+        ========================== -->
+        <!-- /.Footer -->
+
+
+    </div><!-- /.wrapper -->
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
