@@ -33,6 +33,14 @@ namespace pentas.Controllers
         {
             return View();
         }
+        public ActionResult Organizasyon()
+        {
+            return View();
+        }
+        public ActionResult Pegmer()
+        {
+            return View();
+        }
 
     }
 }
