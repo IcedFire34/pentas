@@ -41,6 +41,14 @@ namespace pentas.Controllers
         {
             return View();
         }
+        public ActionResult Insan_Kaynaklari()
+        {
+            return View();
+        }
+        public ActionResult Iletisim()
+        {
+            return View();
+        }
 
     }
 }
