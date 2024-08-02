@@ -322,6 +322,20 @@
     <Content Include="web\assets\images\page-titles\7.jpg" />
     <Content Include="web\assets\images\page-titles\8.jpg" />
     <Content Include="web\assets\images\page-titles\9.jpg" />
+    <Content Include="web\assets\images\paintball\1.jpeg" />
+    <Content Include="web\assets\images\paintball\10.jpeg" />
+    <Content Include="web\assets\images\paintball\11.jpeg" />
+    <Content Include="web\assets\images\paintball\12.jpeg" />
+    <Content Include="web\assets\images\paintball\13.jpeg" />
+    <Content Include="web\assets\images\paintball\14.jpeg" />
+    <Content Include="web\assets\images\paintball\2.jpeg" />
+    <Content Include="web\assets\images\paintball\3.jpeg" />
+    <Content Include="web\assets\images\paintball\4.jpeg" />
+    <Content Include="web\assets\images\paintball\5.jpeg" />
+    <Content Include="web\assets\images\paintball\6.jpeg" />
+    <Content Include="web\assets\images\paintball\7.jpeg" />
+    <Content Include="web\assets\images\paintball\8.jpeg" />
+    <Content Include="web\assets\images\paintball\9.jpeg" />
     <Content Include="web\assets\images\portfolio\grid\1.jpg" />
     <Content Include="web\assets\images\portfolio\grid\2.jpg" />
     <Content Include="web\assets\images\portfolio\grid\3.jpg" />
@@ -687,6 +701,7 @@
     <Content Include="Views\Otoparklar\Marmara_Hastanesi_Otoparki.cshtml" />
     <Content Include="Views\Otoparklar\Mostar_Otoparki.cshtml" />
     <Content Include="Views\Otoparklar\Carsi_Otoparki.cshtml" />
+    <Content Include="Views\Default\Paintball.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

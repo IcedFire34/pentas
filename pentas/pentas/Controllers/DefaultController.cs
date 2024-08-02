@@ -49,6 +49,9 @@ namespace pentas.Controllers
         {
             return View();
         }
-
+        public ActionResult Paintball()
+        {
+            return View();
+        }
     }
 }

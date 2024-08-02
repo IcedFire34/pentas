@@ -53,6 +53,6 @@ $mail->Body = $message;
 if(!$mail->Send()) {
 	echo '<div class="alert alert-danger" role="alert">Error: '. $mail->ErrorInfo.'</div>';
 } else {
-	echo '<div class="alert alert-success" role="alert">Thank you. We will contact you shortly.</div>';
+	echo '<div class="alert alert-success" role="alert">Teþekkürler en kýsa sürede geri dönüþ saðlayacaðýz.</div>';
 }
 ?>
