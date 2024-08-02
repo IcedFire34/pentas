@@ -176,6 +176,7 @@
     <Content Include="web\assets\css\style.css" />
     <Content Include="web\assets\fonts\icomoon.svg" />
     <Content Include="web\assets\images\about\1.jpg" />
+    <Content Include="web\assets\images\about\Ik.png" />
     <Content Include="web\assets\images\about\singnture.png" />
     <Content Include="web\assets\images\awards\1.jpg" />
     <Content Include="web\assets\images\awards\2.jpg" />
