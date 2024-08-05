@@ -23,6 +23,10 @@ namespace pentas.Controllers
         {
             return View();
         }
+        public ActionResult Tesisler()
+        {
+            return View();
+        }
 
         void connectionString() 
         {

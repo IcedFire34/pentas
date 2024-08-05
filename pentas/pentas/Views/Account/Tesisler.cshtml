@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "Tesisler";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="header-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesisler</font></font></h4>
+                <p class="text-muted font-size-13 mb-4">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            Tesis bilgileri listelenmiştir. Yeni tesisler eklenebilir, düzenlenebilir ve silinebilir.
+                        </font>
+                    </font><code>$().DataTable();</code><font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">
+                            .
+                        </font>
+                    </font>
+                </p>
+
+                <div id="basic-datatable_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+                    <div class="row"><div class="col-sm-12 col-md-6"><div class="dataTables_length" id="basic-datatable_length"><label class="form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Göstermek</font></font><select name="basic-datatable_length" aria-controls="basic-datatable" class="form-select form-select-sm"><option value="10"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></option><option value="25"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25</font></font></option><option value="50"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">50</font></font></option><option value="100"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100</font></font></option></select><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">girdileri</font></font></label></div></div><div class="col-sm-12 col-md-6"><div id="basic-datatable_filter" class="dataTables_filter"><label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aramak:</font></font><input type="search" class="form-control form-control-sm" placeholder="" aria-controls="basic-datatable"></label></div></div></div><div class="row dt-row">
+                        <div class="col-sm-12">
+                            <table id="basic-datatable" class="table dt-responsive nowrap w-100 dataTable no-footer dtr-inline" aria-describedby="basic-datatable_info" style="width: 1192px;">
+                                <thead>
+                                    <tr><th class="sorting sorting_asc" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" style="width: 191px;" aria-sort="ascending" aria-label="İsim: Sütunları azalan şekilde sıralamak için etkinleştir"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İsim</font></font></th><th class="sorting" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" style="width: 288px;" aria-label="Konum: Sütunları artan düzende sıralamak için etkinleştirin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Konum</font></font></th><th class="sorting" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" style="width: 138px;" aria-label="Ofis: Sütunları artan düzende sıralamak için etkinleştir"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ofis</font></font></th><th class="sorting" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" style="width: 70px;" aria-label="Yaş: Sütunları artan düzende sıralamak için etkinleştirin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yaş</font></font></th><th class="sorting" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" style="width: 135px;" aria-label="Başlangıç ​​tarihi: Sütunları artan düzende sıralamak için etkinleştirin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Başlangıç ​​tarihi</font></font></th><th class="sorting" tabindex="0" aria-controls="basic-datatable" rowspan="1" colspan="1" style="width: 118px;" aria-label="Maaş: Sütunu artan şekilde sıralamak için etkinleştirin"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Maaş</font></font></th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd">
+                                        <td class="dtr-control sorting_1" tabindex="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Airi Sato</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Muhasebeci</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tokyo</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">33</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2008/11/28</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">162.700 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1 dtr-control"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Angelica Ramos</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">İcra Kurulu Başkanı (CEO)</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Londra</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">47</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2009/10/09</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.200.000 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="dtr-control sorting_1" tabindex="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ashton Cox</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Junior Teknik Yazar</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">San Francisco</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">66</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2009/01/12</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">86.000 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1 dtr-control"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bradley Greer</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yazılım Mühendisi</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Londra</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">41</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2012/10/13</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">132.000 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1 dtr-control"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Brenden Wagner</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yazılım Mühendisi</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">San Francisco</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2011/06/07</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">206.850 ABD doları</font></font></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="dtr-control sorting_1" tabindex="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Brielle Williamson</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entegrasyon Uzmanı</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">New York</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">61</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2012/12/02</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">372.000 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1 dtr-control"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bruno Nash</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yazılım Mühendisi</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Londra</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">38</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2011/05/03</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">163.500 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="sorting_1 dtr-control"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sezar Vance</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Satış Öncesi Destek</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">New York</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2011/12/12</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">106.450 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="odd">
+                                        <td class="sorting_1 dtr-control"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kara Stevens</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Satış danışmanı</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">New York</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">46</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2011/12/06</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">145.600 dolar</font></font></td>
+                                    </tr>
+                                    <tr class="even">
+                                        <td class="dtr-control sorting_1" tabindex="0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cedric Kelly</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Kıdemli Javascript Geliştiricisi</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Edinburg</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2012/03/29</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">433.060 $</font></font></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="basic-datatable_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">57 girdiden 1 ila 10 gösteriliyor</font></font></div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="basic-datatable_paginate"><ul class="pagination pagination-rounded"><li class="paginate_button page-item previous disabled" id="basic-datatable_previous"><a aria-controls="basic-datatable" aria-disabled="true" aria-role="link" data-dt-idx="previous" tabindex="0" class="page-link"><i class="mdi mdi-chevron-left"></i></a></li><li class="paginate_button page-item active"><a href="#" aria-controls="basic-datatable" aria-role="link" aria-current="page" data-dt-idx="0" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="basic-datatable" aria-role="link" data-dt-idx="1" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="basic-datatable" aria-role="link" data-dt-idx="2" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="basic-datatable" aria-role="link" data-dt-idx="3" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="basic-datatable" aria-role="link" data-dt-idx="4" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></a></li><li class="paginate_button page-item "><a href="#" aria-controls="basic-datatable" aria-role="link" data-dt-idx="5" tabindex="0" class="page-link"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></a></li><li class="paginate_button page-item next" id="basic-datatable_next"><a href="#" aria-controls="basic-datatable" aria-role="link" data-dt-idx="next" tabindex="0" class="page-link"><i class="mdi mdi-chevron-right"></i></a></li></ul></div></div></div>
+                </div>
+            </div> <!-- end card body-->
+        </div> <!-- end card -->
+    </div><!-- end col-->
+</div>
+
