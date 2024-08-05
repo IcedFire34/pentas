@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using pentas.Models;
 using System.Data.SqlClient;
 
 namespace pentas.Controllers
@@ -13,11 +12,14 @@ namespace pentas.Controllers
     public class AccountController : Controller
     {
         SqlConnection _connection = new SqlConnection();
-        SqlCommand _command = new SqlCommand();
-        SqlDataReader _reader;
+        SqlCommand _command = new SqlCommand();        
 
         [HttpGet]
         public ActionResult Login()
+        {
+            return View();
+        }
+        public ActionResult Index()
         {
             return View();
         }
@@ -26,38 +28,32 @@ namespace pentas.Controllers
         {
             _connection.ConnectionString = "data source=DESKTOP-DFQMG2T; database=pentasDB; integrated security = SSPI";            
         }
+
         [HttpPost]
         public ActionResult Verify(User user)
         {
             connectionString();
-            _connection.Open();
-            _command.Connection = _connection;
-            // Parametreli sorgu oluşturun
-            _command.CommandText = "SELECT * FROM [User] WHERE email = @Email AND paswd = @Password";
-
-            // Parametreleri ekleyin
-            _command.Parameters.AddWithValue("@Email", user.email);
-            _command.Parameters.AddWithValue("@Password", user.paswd);
-
-            // Komutu çalıştırın
-            _reader = _command.ExecuteReader();
-
-
-            if (_reader.Read()) 
+            using (var connection = new SqlConnection(_connection.ConnectionString))
             {
-                _connection.Close();
-                return View("Index");
+                connection.Open();
+                using (var command = new SqlCommand("SELECT * FROM [User] WHERE email = @Email AND paswd = @Password", connection))
+                {
+                    command.Parameters.AddWithValue("@Email", user.email);
+                    command.Parameters.AddWithValue("@Password", user.paswd);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return View("Index");
+                        }
+                        else
+                        {
+                            return View("Account/Login");
+                        }
+                    }
+                }
             }
-            else
-            {
-                _connection.Close();
-                return View("Login");
-            }
-
-                       
         }
-
-
 
     }
 }
