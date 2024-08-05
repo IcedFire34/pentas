@@ -7,13 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pentas
+namespace pentas.Models
 {
     using System;
     using System.Collections.Generic;
     
     public partial class Tesisler
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Tesisler()
+        {
+            this.Foto = new HashSet<Foto>();
+        }
+    
         public int ID { get; set; }
         public string adi { get; set; }
         public string kapak_foto { get; set; }
@@ -23,5 +29,9 @@ namespace pentas
         public string email { get; set; }
         public string aciklama { get; set; }
         public int turID { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Foto> Foto { get; set; }
+        public virtual OrganizasyonTuru OrganizasyonTuru { get; set; }
     }
 }

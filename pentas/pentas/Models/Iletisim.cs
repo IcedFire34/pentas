@@ -7,17 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pentas
+namespace pentas.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Iletisim
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ID { get; set; }
+        public string adi_soyadi { get; set; }
+        public string mail { get; set; }
+        public string telefon { get; set; }
+        public string konu { get; set; }
+        public string mesaj { get; set; }
+        public string date { get; set; }
     }
 }

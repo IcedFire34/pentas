@@ -7,21 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pentas
+namespace pentas.Models
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class PegmerGirisimcileri
-    {
+    using System.ComponentModel.DataAnnotations;
+
+    public partial class User
+    {        
         public int ID { get; set; }
-        public string adi { get; set; }
-        public string soyadi { get; set; }
-        public string firma_adi { get; set; }
-        public string faliyet_detayi { get; set; }
-        public string web { get; set; }
         public string email { get; set; }
-        public string telefon { get; set; }
-        public string faliyet_alani { get; set; }
+        public string paswd { get; set; }
     }
 }

@@ -13,6 +13,9 @@
         <EntityTypeShape EntityType="pentasDBModel.PegmerGirisimcileri" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="pentasDBModel.sysdiagrams" Width="1.5" PointX="9.5" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="pentasDBModel.Tesisler" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="pentasDBModel.FK_Foto_Tesisler" />
+        <AssociationConnector Association="pentasDBModel.FK_Tesisler_OrganizasyonTuru" />
+        <EntityTypeShape EntityType="pentasDBModel.User" Width="1.5" PointX="8.875" PointY="3.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

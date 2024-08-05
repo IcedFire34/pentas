@@ -1,0 +1,54 @@
+﻿@model pentas.Models.User
+
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="PENTAŞ">
+    <link href="~/web/assets/images/favicon/favicon.png" rel="icon">
+
+    <link href="~/web/login_assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/web/login_assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/web/login_assets/css/style.css" rel="stylesheet">
+
+    <title>Pentaş Admin</title>
+</head>
+<body>
+    <section class="form-01-main">
+        <div class="form-cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-sub-main">
+                            <div class="_main_head_as">
+                                <a href="/Default/Index">
+                                    <img src="~/web/login_assets/images/vector.png">                                    
+                                </a>
+                            </div>
+                            <form method="post" action="/Account/Verify">
+                                <div class="form-group">
+                                    <label for="Username" class="sr-only">Kullanıcı Adı:</label>
+                                    <input type="text" id="Username" name="email" class="form-control _ge_de_ol" placeholder="Kullanıcı Adı" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password" class="sr-only">Şifre:</label>
+                                    <input type="password" id="Password" name="paswd" class="form-control" placeholder="Şifre" required />
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

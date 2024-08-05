@@ -7,15 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pentas
+namespace pentas.Models
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class AnaSayfaHizmetler
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int ID { get; set; }
-        public string adi { get; set; }
-        public string hizmet_foto_path { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -7,19 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace pentas
+namespace pentas.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Iletisim
+    public partial class AnaSayfaSlider
     {
         public int ID { get; set; }
-        public string adi_soyadi { get; set; }
-        public string mail { get; set; }
-        public string telefon { get; set; }
-        public string konu { get; set; }
-        public string mesaj { get; set; }
-        public string date { get; set; }
+        public int sira { get; set; }
+        public string photo_path { get; set; }
     }
 }

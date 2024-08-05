@@ -117,10 +117,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnaSayfaHizmetler.cs">
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Models\AnaSayfaHizmetler.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="AnaSayfaSlider.cs">
+    <Compile Include="Models\AnaSayfaSlider.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -132,48 +133,50 @@
     <Compile Include="Controllers\OtoparklarController.cs" />
     <Compile Include="Controllers\PegmerController.cs" />
     <Compile Include="Controllers\TesislerController.cs" />
-    <Compile Include="db.Context.cs">
+    <Compile Include="Models\db.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="db.cs">
+    <Compile Include="Models\db.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="db.Designer.cs">
+    <Compile Include="Models\db.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>db.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Foto.cs">
+    <Compile Include="Models\Foto.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Iletisim.cs">
+    <Compile Include="Models\Iletisim.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="OrganizasyonTuru.cs">
+    <Compile Include="Models\OrganizasyonTuru.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="PegmerGirisimcileri.cs">
+    <Compile Include="Models\PegmerGirisimcileri.cs">
+      <DependentUpon>db.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+    <Compile Include="Models\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
+    <Compile Include="Models\sp_helpdiagrams_Result.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
+    <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
-    <Compile Include="Tesisler.cs">
+    <Compile Include="Models\Tesisler.cs">
       <DependentUpon>db.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -194,12 +197,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="db.Context.tt">
+    <Content Include="Models\db.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>db.edmx</DependentUpon>
       <LastGenOutput>db.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="db.tt">
+    <Content Include="Models\db.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>db.edmx</DependentUpon>
       <LastGenOutput>db.cs</LastGenOutput>
@@ -210,11 +213,11 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="db.edmx">
+    <EntityDeploy Include="Models\db.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>db.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="db.edmx.diagram">
+    <Content Include="Models\db.edmx.diagram">
       <DependentUpon>db.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
@@ -758,10 +761,11 @@
     <Content Include="Views\Otoparklar\Mostar_Otoparki.cshtml" />
     <Content Include="Views\Otoparklar\Carsi_Otoparki.cshtml" />
     <Content Include="Views\Default\Paintball.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="web\assets\images\sliders\" />
   </ItemGroup>
   <ItemGroup>

@@ -4,12 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="pentasDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="pentasDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="AnaSayfaHizmetler">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="adi" Type="nvarchar(max)" Nullable="false" />
           <Property Name="hizmet_foto_path" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="sira" Type="int" Nullable="false" />
           <Property Name="photo_path" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
@@ -25,7 +25,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tesisID" Type="int" Nullable="false" />
           <Property Name="foto_path" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
@@ -33,7 +33,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="adi_soyadi" Type="nvarchar(max)" Nullable="false" />
           <Property Name="mail" Type="nvarchar(max)" Nullable="false" />
           <Property Name="telefon" Type="nvarchar" MaxLength="12" Nullable="false" />
@@ -45,14 +45,14 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="adi" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="PegmerGirisimcileri">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="adi" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="soyadi" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="firma_adi" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -76,7 +76,7 @@
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="adi" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="kapak_foto" Type="nvarchar(max)" Nullable="false" />
           <Property Name="map_url" Type="nvarchar(max)" Nullable="false" />
@@ -86,6 +86,38 @@
           <Property Name="aciklama" Type="nvarchar(max)" />
           <Property Name="turID" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="paswd" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Foto_Tesisler">
+          <End Role="Tesisler" Type="Self.Tesisler" Multiplicity="1" />
+          <End Role="Foto" Type="Self.Foto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tesisler">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Foto">
+              <PropertyRef Name="tesisID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tesisler_OrganizasyonTuru">
+          <End Role="OrganizasyonTuru" Type="Self.OrganizasyonTuru" Multiplicity="1" />
+          <End Role="Tesisler" Type="Self.Tesisler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganizasyonTuru">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tesisler">
+              <PropertyRef Name="turID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
@@ -126,9 +158,17 @@
           <EntitySet Name="PegmerGirisimcileri" EntityType="Self.PegmerGirisimcileri" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tesisler" EntityType="Self.Tesisler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Foto_Tesisler" Association="Self.FK_Foto_Tesisler">
+            <End Role="Tesisler" EntitySet="Tesisler" />
+            <End Role="Foto" EntitySet="Foto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tesisler_OrganizasyonTuru" Association="Self.FK_Tesisler_OrganizasyonTuru">
+            <End Role="OrganizasyonTuru" EntitySet="OrganizasyonTuru" />
+            <End Role="Tesisler" EntitySet="Tesisler" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="pentasDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -155,6 +195,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="tesisID" Type="Int32" Nullable="false" />
           <Property Name="foto_path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tesisler" Relationship="pentasDBModel.FK_Foto_Tesisler" FromRole="Foto" ToRole="Tesisler" />
         </EntityType>
         <EntityType Name="Iletisim">
           <Key>
@@ -174,6 +215,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="adi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Tesisler" Relationship="pentasDBModel.FK_Tesisler_OrganizasyonTuru" FromRole="OrganizasyonTuru" ToRole="Tesisler" />
         </EntityType>
         <EntityType Name="PegmerGirisimcileri">
           <Key>
@@ -212,6 +254,8 @@
           <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="turID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Foto" Relationship="pentasDBModel.FK_Foto_Tesisler" FromRole="Tesisler" ToRole="Foto" />
+          <NavigationProperty Name="OrganizasyonTuru" Relationship="pentasDBModel.FK_Tesisler_OrganizasyonTuru" FromRole="Tesisler" ToRole="OrganizasyonTuru" />
         </EntityType>
         <EntityContainer Name="pentasDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AnaSayfaHizmetler" EntityType="Self.AnaSayfaHizmetler" />
@@ -252,6 +296,15 @@
             <Parameter Name="new_diagramname" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="sp_upgraddiagrams" />
+          <AssociationSet Name="FK_Foto_Tesisler" Association="pentasDBModel.FK_Foto_Tesisler">
+            <End Role="Tesisler" EntitySet="Tesisler" />
+            <End Role="Foto" EntitySet="Foto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tesisler_OrganizasyonTuru" Association="pentasDBModel.FK_Tesisler_OrganizasyonTuru">
+            <End Role="OrganizasyonTuru" EntitySet="OrganizasyonTuru" />
+            <End Role="Tesisler" EntitySet="Tesisler" />
+          </AssociationSet>
+          <EntitySet Name="User" EntityType="pentasDBModel.User" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -264,6 +317,38 @@
           <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
           <Property Type="Int32" Name="OwnerID" Nullable="false" />
         </ComplexType>
+        <Association Name="FK_Foto_Tesisler">
+          <End Type="pentasDBModel.Tesisler" Role="Tesisler" Multiplicity="1" />
+          <End Type="pentasDBModel.Foto" Role="Foto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tesisler">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Foto">
+              <PropertyRef Name="tesisID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tesisler_OrganizasyonTuru">
+          <End Type="pentasDBModel.OrganizasyonTuru" Role="OrganizasyonTuru" Multiplicity="1" />
+          <End Type="pentasDBModel.Tesisler" Role="Tesisler" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganizasyonTuru">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tesisler">
+              <PropertyRef Name="turID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="paswd" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -383,6 +468,15 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="pentasDBModel.Store.sp_renamediagram" />
           <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="pentasDBModel.Store.sp_upgraddiagrams" />
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="pentasDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="paswd" ColumnName="paswd" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
