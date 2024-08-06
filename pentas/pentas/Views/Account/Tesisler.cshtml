@@ -4,60 +4,60 @@
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
 
-<div class="row">
-    <div class="col-12">
-        <div class="card">
-            <div class="card-body">
-                <h4 class="header-title">Tesisler</h4>
-                <p class="sub-header">
-                    Tesisler aşağıdaki gibi listelenmiştir.
-                </p>
+@model IEnumerable<pentas.Models.Tesisler>
 
-                <div class="table-responsive">
-                    <table class="table table-striped mb-0">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Adı</th>
-                                <th>Kapak Fotoğrafı</th>
-                                <th>Map URL</th>
-                                <th>Adres</th>
-                                <th>Telefon</th>
-                                <th>Email</th>
-                                <th>Açıklama</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Güzelyali_Sosyal_Tesisler</td>
-                                <td>~/web/assets/images/tesisler/guzelyali_sosyal_tesisleri.jpg</td>
-                                <td>https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1508.8695408202439!2d29.280180000000005!3d40.855652!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadc5ffb56c981%3A0x4099c43262cd1eea!2sPendik%20Belediyesi%20G%C3%BCzelyal%C4%B1%20Sosyal%20Tesisleri!5e0!3m2!1str!2sus!4v1721823444925!5m2!1str!2sus</td>
-                                <td>Güzelyalı Mahallesi, Sahil Blv No:72, 34903 Pendik/İstanbul</td>
-                                <td>+90 (216) 494 43 14</td>
-                                <td>info@pentas.org</td>
-                                <td>
-                                    Güzelyalı Sosyal Tesisleri, Güzelyalı mahallesinde faaliyet göstermektedir. Güzelyalı Sosyal Tesisleri piknik alanları, seyir çardakları ve çocuk parkı gibi aktiviteleri içerisinde bulunduran ve konumu itibariyle deniz havası alınabilecek bir tesis özelliği taşımaktadır. Tesis içerisinde vakit geçirebileceğiniz açık ve kapalı bölümler bulunmaktadır. Restaurant bölümünde zengin içerikli menümüzden ve güler yüzlü personelimizden servis hizmeti alabilir; yaz aylarında faaliyet gösteren kafeterya bölümünde ise çayınızı yudumlayabilirsiniz.
-                                    Tesisimiz ferah alanları itibariyle her türlü toplantı, düğün, nişan organizasyonlarınız için ev sahipliği yapmaya hazırdır
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> <!-- end table-responsive-->
-            </div>
-        </div> <!-- end card -->
-    </div><!-- end col-->
-</div>
-
+<html>
+<head>
+    <style>
+        .table td, .table th {
+            white-space: nowrap;
+            font-size: 0.875rem;
+        }        
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="header-title">Tesisler</h4>
+                        <p class="sub-header">Tesisler aşağıdaki gibi listelenmiştir.</p>
+                        <div class="table-responsive">
+                            <table class="table table-striped mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Adı</th>
+                                        <th>Kapak Fotoğrafı</th>
+                                        <th>Map URL</th>
+                                        <th>Adres</th>
+                                        <th>Telefon</th>
+                                        <th>Email</th>
+                                        <th>Açıklama</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var tesis in Model)
+                                    {
+                                        <tr>
+                                            <th scope="row">@tesis.ID</th>
+                                            <td>@tesis.adi</td>
+                                            <td>@tesis.kapak_foto</td>
+                                            <td>@tesis.map_url</td>
+                                            <td>@tesis.adres</td>
+                                            <td>@tesis.telefon</td>
+                                            <td>@tesis.email</td>
+                                            <td>@tesis.aciklama</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div> <!-- end table-responsive-->
+                    </div>
+                </div> <!-- end card -->
+            </div><!-- end col-->
+        </div>
+    </div>
+</body>
+</html>
