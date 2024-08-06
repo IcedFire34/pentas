@@ -52,7 +52,7 @@ namespace pentas.Controllers
                         }
                         else
                         {
-                            return View("Account/Login");
+                            return View("Login");
                         }
                     }
                 }
