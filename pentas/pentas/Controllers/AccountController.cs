@@ -1,55 +1,77 @@
 ﻿using pentas.Data;
 using pentas.Models;
-using System.Linq;
 using System.Web.Mvc;
+using System.Linq; // Bu satırı ekleyin
 
-namespace pentas.Controllers
+
+public class AccountController : Controller
 {
-    public class AccountController : Controller
+    private readonly ApplicationDbContext _context;
+
+    public AccountController()
     {
-        private readonly ApplicationDbContext _context;
+        _context = new ApplicationDbContext();
+    }
 
-        public AccountController()
-        {
-            _context = new ApplicationDbContext();
-        }
+    [HttpGet]
+    public ActionResult Login()
+    {
+        return View();
+    }
 
-        [HttpGet]
-        public ActionResult Login()
+    [HttpPost]
+    public ActionResult Verify(User user)
+    {
+        if (ModelState.IsValid)
         {
-            return View();
-        }
+            var validUser = _context.Users
+                .Where(u => u.email == user.email && u.paswd == user.paswd)
+                .FirstOrDefault();
 
-        [HttpPost]
-        public ActionResult Verify(User user)
-        {
-            if (ModelState.IsValid)
+            if (validUser != null)
             {
-                var validUser = _context.Users
-                    .Where(u => u.email == user.email && u.paswd == user.paswd)
-                    .FirstOrDefault();
-
-                if (validUser != null)
-                {
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    ModelState.AddModelError("", "Geçersiz giriş");
-                }
+                return RedirectToAction("Index");
             }
-            return View("Login");
+            else
+            {
+                ModelState.AddModelError("", "Geçersiz giriş");
+            }
         }
+        return View("Login");
+    }
 
-        public ActionResult Index()
-        {
-            return View();
-        }
+    public ActionResult Index()
+    {
+        return View();
+    }
 
-        public ActionResult Tesisler()
+    public ActionResult Tesisler()
+    {
+        var tesisler = _context.Tesisler.ToList();
+        return View(tesisler);
+    }
+
+    [HttpPost]
+    public ActionResult Sil(int id)
+    {
+        var tesis = _context.Tesisler.Find(id);
+        if (tesis != null)
         {
-            var tesisler = _context.Tesisler.ToList();
-            return View(tesisler);
+            _context.Tesisler.Remove(tesis);
+            _context.SaveChanges();
         }
+        return RedirectToAction("Tesisler");
+    }
+
+    [HttpPost]    
+    public ActionResult Ekle(Tesisler tesis)
+    {
+        if (ModelState.IsValid)
+        {
+            tesis.turID = 1;
+            _context.Tesisler.Add(tesis);
+            _context.SaveChanges();
+        }
+        return RedirectToAction("Tesisler");
     }
 }

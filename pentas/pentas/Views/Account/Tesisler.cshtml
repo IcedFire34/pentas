@@ -1,10 +1,9 @@
-﻿
+﻿@model IEnumerable<pentas.Models.Tesisler>
+
 @{
     ViewBag.Title = "Tesisler";
     Layout = "~/Views/Shared/_DashboardLayout.cshtml";
 }
-
-@model IEnumerable<pentas.Models.Tesisler>
 
 <html>
 <head>
@@ -12,7 +11,7 @@
         .table td, .table th {
             white-space: nowrap;
             font-size: 0.875rem;
-        }        
+        }
     </style>
 </head>
 <body>
@@ -56,66 +55,71 @@
                         </div> <!-- end table-responsive-->
                     </div>
                 </div> <!-- end card -->
-            </div><!-- end col-->
+            </div><!-- end col--><!-- end col-->
+            <!-- Silme Formu -->
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title mb-3">Silinecek tesisin ID'sini giriniz.</h4>
-                        <form role="form">
+                        @using (Html.BeginForm("Sil", "Account", FormMethod.Post))
+                        {
                             <div class="mb-2">
-                                <label for="exampleInputEmail1" class="form-label">ID</label>
-                                <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">                                
-                            </div>                                                     
+                                <label for="silinecekID" class="form-label">ID</label>
+                                <input class="form-control" name="id" id="silinecekID" aria-describedby="emailHelp" type="number" required>
+                            </div>
                             <button type="submit" class="btn btn-primary">Sil</button>
-                        </form>
+                        }
                     </div>
                 </div>
             </div>
+
+            <!-- Ekleme Formu -->
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="header-title mb-3">Yeni tesis gir.</h4>
-                        <form role="form">
+                        @using (Html.BeginForm("Ekle", "Account", FormMethod.Post))
+                        {
                             <div class="row mb-3">
-                                <label for="inputEmail3" class="col-sm-3 col-form-label">Adı:</label>
+                                <label for="adi" class="col-sm-3 col-form-label">Adı:</label>
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="adi">
+                                    <input class="form-control" name="adi" id="adi" type="text" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-3 col-form-label">Kapak Fotoğrafı:</label>
+                                <label for="kapak_foto" class="col-sm-3 col-form-label">Kapak Fotoğrafı:</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="kapak_foto" >
-                                </div>
-                            </div>
-                            <div class="row mb-2">
-                                <label for="inputPassword5" class="col-sm-3 col-form-label">Map Script</label>
-                                <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="map_script" >
+                                    <input class="form-control" name="kapak_foto" id="kapak_foto" type="text" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-3 col-form-label">Adres:</label>
+                                <label for="map_script" class="col-sm-3 col-form-label">Map Script Url</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="adres" >
+                                    <input class="form-control" name="map_url" id="map_url" type="text" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-3 col-form-label">Telefon:</label>
+                                <label for="adres" class="col-sm-3 col-form-label">Adres:</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="tel" >
+                                    <input class="form-control" name="adres" id="adres" type="text" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-3 col-form-label">Email:</label>
+                                <label for="telefon" class="col-sm-3 col-form-label">Telefon:</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="mail" >
+                                    <input class="form-control" name="telefon" id="telefon" type="text" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-3 col-form-label">Açıklama:</label>
+                                <label for="email" class="col-sm-3 col-form-label">Email:</label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" id="aciklama" >
+                                    <input class="form-control" name="email" id="email" type="text" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="aciklama" class="col-sm-3 col-form-label">Açıklama:</label>
+                                <div class="col-sm-9">
+                                    <input class="form-control" name="aciklama" id="aciklama" type="text" required>
                                 </div>
                             </div>
                             <div class="justify-content-end row">
@@ -123,7 +127,7 @@
                                     <button type="submit" class="btn btn-primary">Ekle</button>
                                 </div>
                             </div>
-                        </form>
+                        }
                     </div>
                 </div>
             </div>

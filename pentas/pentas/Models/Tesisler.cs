@@ -11,7 +11,8 @@ namespace pentas.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Tesisler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,17 +20,38 @@ namespace pentas.Models
         {
             this.Foto = new HashSet<Foto>();
         }
-    
+
+        [Key]
         public int ID { get; set; }
+
+        [Required(ErrorMessage = "Adý zorunludur.")]
+        [StringLength(100, MinimumLength = 3, ErrorMessage = "Adý 3 ila 100 karakter arasýnda olmalýdýr.")]
         public string adi { get; set; }
+
+        [Required(ErrorMessage = "Kapak Fotoðrafý zorunludur.")]
         public string kapak_foto { get; set; }
+
+        [Required(ErrorMessage = "Map URL zorunludur.")]
+        [Url(ErrorMessage = "Geçerli bir URL giriniz.")]
         public string map_url { get; set; }
+
+        [Required(ErrorMessage = "Adres zorunludur.")]
         public string adres { get; set; }
+
+        [Required(ErrorMessage = "Telefon zorunludur.")]
+        [Phone(ErrorMessage = "Geçerli bir telefon numarasý giriniz.")]
         public string telefon { get; set; }
+
+        [Required(ErrorMessage = "Email zorunludur.")]
+        [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi giriniz.")]
         public string email { get; set; }
+
+        [Required(ErrorMessage = "Açýklama zorunludur.")]
         public string aciklama { get; set; }
+
+        [Required(ErrorMessage = "Tür ID'si zorunludur.")]
         public int turID { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Foto> Foto { get; set; }
         public virtual OrganizasyonTuru OrganizasyonTuru { get; set; }
